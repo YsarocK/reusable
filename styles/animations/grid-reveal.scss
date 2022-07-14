@@ -1,0 +1,38 @@
+// Usage : @include come-in(1, 30)
+@keyframes comein {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin comein($from: 1, $to: 6, $speed: 0.7s, $delay: 0.05s) {
+  animation: comein $speed var(--easing--primary) forwards;
+  opacity: 0;
+  transform: translateY(20%);
+
+  @for $i from 1 through 30 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * ($delay);
+    }
+  }
+}
