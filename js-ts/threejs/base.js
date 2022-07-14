@@ -1,3 +1,5 @@
+// Three.js init class
+
 import { Scene, PerspectiveCamera, WebGLRenderer, Vector3, PCFSoftShadowMap, ACESFilmicToneMapping, sRGBEncoding } from "three";
 
 export class Base {

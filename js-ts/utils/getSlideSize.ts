@@ -1,3 +1,5 @@
+// Allows you to get the sliding vector made by the user with the mouse
+
 const getSlideSizeJS = () => {
   document.addEventListener('mousedown', (e1) => {
     const startX = e1.clientX

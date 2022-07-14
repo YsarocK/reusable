@@ -1,3 +1,5 @@
+// Add .reveal-wrapper to every parent section & .reveal to every animated element
+
 const sections = document.querySelectorAll('.reveal-wrapper')
 const length = sections.length
 
